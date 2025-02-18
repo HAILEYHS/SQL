@@ -1,0 +1,8 @@
+-- MySQL
+
+select NAME, count(name) as COUNT
+from ANIMAL_INS
+where NAME is not null
+group by NAME
+having count(name) > 1
+order by NAME;
